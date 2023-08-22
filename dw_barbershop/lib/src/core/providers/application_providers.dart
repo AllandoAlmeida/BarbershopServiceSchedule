@@ -20,7 +20,7 @@ UserRepository userRepository(UserRepositoryRef ref) =>
 
 @Riverpod(keepAlive: true)
 UserLoginService userLoginService(UserLoginServiceRef ref) =>
-    UserLoginServiceImpl(userRepository: ref.read(userRepositoryProvider));
+    UserLoginServiceImpl(userRepository: ref.read(userRepositoryProvider), userLoginService: null);
 
 @Riverpod(keepAlive: true)
 Future<UserModel> getMe(GetMeRef ref) async {

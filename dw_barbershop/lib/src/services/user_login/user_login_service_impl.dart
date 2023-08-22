@@ -12,8 +12,13 @@ import './user_login_service.dart';
 
 class UserLoginServiceImpl implements UserLoginService {
   final UserRepository userRepository;
-  UserLoginServiceImpl({
+  
+  // ignore: prefer_typing_uninitialized_variables
+  var userLoginService;
+  
+ UserLoginServiceImpl({
     required this.userRepository,
+    required this.userLoginService,
   });
   @override
   Future<Either<ServiceException, Nil>> execute(
